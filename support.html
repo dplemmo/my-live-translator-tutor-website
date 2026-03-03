@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — My Live Translator and Tutor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --amber: #E6A640;
+            --light-amber: #F2BF66;
+            --deep-amber: #BF8026;
+            --warm-charcoal: #1E1C1A;
+            --warm-espresso: #191714;
+            --warm-cream: #FAF2E6;
+            --soft-sand: #EADEC7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #555;
+            --text-light: #888;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+            background: #fff;
+            line-height: 1.7;
+        }
+        nav {
+            background: var(--warm-charcoal);
+            padding: 0 24px;
+        }
+        .nav-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            height: 56px;
+        }
+        .nav-inner a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s;
+        }
+        .nav-inner a:hover { color: #fff; }
+        .nav-inner a svg { width: 16px; height: 16px; }
+        .page-header {
+            background: linear-gradient(180deg, var(--warm-cream) 0%, #fff 100%);
+            padding: 80px 24px 48px;
+            text-align: center;
+        }
+        .page-header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--warm-charcoal);
+            margin-bottom: 8px;
+        }
+        .page-header p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        /* Contact Card */
+        .contact-card {
+            background: var(--warm-cream);
+            border-radius: 16px;
+            padding: 36px;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .contact-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--amber), var(--deep-amber));
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+        }
+        .contact-card h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--warm-charcoal);
+        }
+        .contact-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 18px;
+        }
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--warm-charcoal);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+        .contact-email:hover { background: #333; }
+        .contact-email svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* FAQ */
+        .faq-section h2 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 32px;
+            color: var(--warm-charcoal);
+        }
+        .faq-item {
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            padding: 20px 0;
+        }
+        .faq-item:first-of-type {
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+        .faq-q {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--warm-charcoal);
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-q::after {
+            content: '+';
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--text-light);
+            flex-shrink: 0;
+            margin-left: 16px;
+            transition: transform 0.2s;
+        }
+        .faq-item.open .faq-q::after {
+            content: '\2212';
+        }
+        .faq-a {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            display: none;
+        }
+        .faq-item.open .faq-a {
+            display: block;
+        }
+
+        footer {
+            background: var(--warm-espresso);
+            color: rgba(255,255,255,0.4);
+            padding: 24px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        footer a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+        footer a:hover { color: var(--amber); }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Support</h1>
+        <p>Need help? We're here for you. Check the FAQ below or reach out directly.</p>
+    </div>
+
+    <div class="content">
+        <!-- Contact Card -->
+        <div class="contact-card">
+            <div class="contact-icon">&#9993;&#65039;</div>
+            <h2>Get in Touch</h2>
+            <p>Have a question, found a bug, or want to share feedback? Drop us an email and we'll get back to you as soon as possible.</p>
+            <a href="mailto:support@example.com" class="contact-email">
+                <!-- TODO: Replace support@example.com with your actual email -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                support@example.com
+            </a>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item open">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is an API key and where do I get one?</div>
+                <div class="faq-a">An API key is a credential that lets the app communicate with AI services. You can get one from <a href="https://platform.openai.com/api-keys" target="_blank" style="color: var(--deep-amber);">OpenAI</a> or <a href="https://aistudio.google.com/apikey" target="_blank" style="color: var(--deep-amber);">Google AI Studio</a>. Both providers offer documentation to help you get started, and Google Gemini offers a generous free tier.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much does it cost to use the app?</div>
+                <div class="faq-a">The app is free to download with 16 included practice scenarios. AI usage costs are paid directly to your chosen provider through your API key. Google Gemini costs approximately $0.03/minute, while OpenAI costs approximately $0.30/minute. You only pay for the time you actively use.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is my data private and secure?</div>
+                <div class="faq-a">Yes. The app uses a privacy-first, BYOK (Bring Your Own Key) architecture. Your conversations go directly from your device to the AI provider — there are no intermediary servers. Your API keys are stored in your device's secure Keychain, and all learning data stays on your device. See our <a href="privacy.html" style="color: var(--deep-amber);">Privacy Policy</a> for details.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Which languages are supported?</div>
+                <div class="faq-a">The app supports 13 languages: English, Spanish, Korean, Mandarin Chinese, French, Portuguese, Arabic, Hindi, Russian, Japanese, German, Thai, and Vietnamese. All languages are available for both translation and tutoring modes.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What's the difference between OpenAI and Gemini?</div>
+                <div class="faq-a">Both providers offer excellent quality. OpenAI (GPT-4o Mini Realtime) generally has the fastest response times and no session limits, but costs more (~$0.30/min). Google Gemini (2.5 Flash) is about 10x cheaper (~$0.03/min) with a generous free tier, but sessions are limited to 15 minutes. You can switch between providers anytime.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I export my flashcards?</div>
+                <div class="faq-a">Yes! The app includes a built-in export feature that creates Anki-compatible flashcard decks from your learned vocabulary. You can share these decks and import them into Anki or other spaced-repetition apps for continued practice.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">The app isn't translating / I'm getting errors</div>
+                <div class="faq-a">First, check that your API key is correctly entered in Settings and that it has sufficient credit/balance. For OpenAI, make sure your key has Realtime API access enabled. For Gemini, ensure you're using a key from Google AI Studio. If issues persist, try switching providers in the app settings, or contact us for help.</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 David Lemmon. All rights reserved. &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="eula.html">EULA</a></p>
+    </footer>
+</body>
+</html>

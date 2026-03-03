@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — My Live Translator and Tutor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --amber: #E6A640;
+            --deep-amber: #BF8026;
+            --warm-charcoal: #1E1C1A;
+            --warm-espresso: #191714;
+            --warm-cream: #FAF2E6;
+            --text-primary: #1a1a1a;
+            --text-secondary: #555;
+            --text-light: #888;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+            background: #fff;
+            line-height: 1.7;
+        }
+        nav {
+            background: var(--warm-charcoal);
+            padding: 0 24px;
+        }
+        .nav-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            height: 56px;
+        }
+        .nav-inner a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s;
+        }
+        .nav-inner a:hover { color: #fff; }
+        .nav-inner a svg { width: 16px; height: 16px; }
+        .page-header {
+            background: linear-gradient(180deg, var(--warm-cream) 0%, #fff 100%);
+            padding: 80px 24px 48px;
+            text-align: center;
+        }
+        .page-header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--warm-charcoal);
+            margin-bottom: 8px;
+        }
+        .page-header .date {
+            font-size: 0.88rem;
+            color: var(--text-light);
+        }
+        .content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+        .content h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 36px 0 12px;
+            color: var(--warm-charcoal);
+        }
+        .content h2:first-of-type { margin-top: 0; }
+        .content p {
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+        }
+        .content ul {
+            margin: 0 0 14px 24px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .content ul li { margin-bottom: 6px; }
+        .highlight-box {
+            background: var(--warm-cream);
+            border-left: 3px solid var(--amber);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 24px 0;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+        }
+        footer {
+            background: var(--warm-espresso);
+            color: rgba(255,255,255,0.4);
+            padding: 24px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        footer a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+        footer a:hover { color: var(--amber); }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Privacy Policy</h1>
+        <p class="date">Last updated: March 2026</p>
+    </div>
+
+    <div class="content">
+        <div class="highlight-box">
+            <strong>Our commitment:</strong> My Live Translator and Tutor is built on a privacy-first architecture. Your conversations are sent directly from your device to the AI provider you choose. We do not operate servers that process, store, or have access to your conversation data.
+        </div>
+
+        <h2>Information We Collect</h2>
+        <p>My Live Translator and Tutor is designed to minimize data collection. Here is what the app handles:</p>
+        <ul>
+            <li><strong>API Keys:</strong> Your OpenAI or Google Gemini API keys are stored locally in your device's secure Keychain. They are never transmitted to our servers.</li>
+            <li><strong>Learning Data:</strong> Your learner profile, session transcripts, flashcards, and progress data are stored entirely on your device using local storage.</li>
+            <li><strong>Audio Data:</strong> Voice audio is captured by your device's microphone and streamed directly to your chosen AI provider (OpenAI or Google) via encrypted WebSocket connections. Audio is not stored or transmitted elsewhere.</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+        <p>The app connects directly to the AI provider you configure:</p>
+        <ul>
+            <li><strong>OpenAI:</strong> If you use an OpenAI API key, your audio and text data are processed according to <a href="https://openai.com/policies/privacy-policy" target="_blank" style="color: var(--deep-amber);">OpenAI's Privacy Policy</a>.</li>
+            <li><strong>Google Gemini:</strong> If you use a Google Gemini API key, your data is processed according to <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--deep-amber);">Google's Privacy Policy</a>.</li>
+        </ul>
+        <p>We encourage you to review the privacy policies of your chosen provider. The BYOK (Bring Your Own Key) model means you have a direct relationship with these providers — we are not an intermediary.</p>
+
+        <h2>Data Storage</h2>
+        <p>All app data is stored locally on your iOS device. This includes your learner profile, session history, flashcard decks, and preferences. No data is synced to external servers operated by us. If you delete the app, all local data is removed.</p>
+
+        <h2>Data Sharing</h2>
+        <p>We do not sell, rent, or share your personal data with third parties. The only data transmission occurs between your device and the AI provider you have configured, using your own API credentials.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>The app is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us so we can take appropriate action.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be reflected on this page with an updated revision date. We encourage you to review this page periodically.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or our data practices, please contact us at:</p>
+        <p><a href="mailto:support@example.com" style="color: var(--deep-amber); font-weight: 600;">support@example.com</a></p>
+        <!-- TODO: Replace support@example.com with your actual contact email -->
+    </div>
+
+    <footer>
+        <p>&copy; 2026 David Lemmon. All rights reserved. &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="eula.html">EULA</a> &nbsp;|&nbsp; <a href="support.html">Support</a></p>
+    </footer>
+</body>
+</html>
